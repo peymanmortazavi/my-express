@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title Peyman Mo | MY Express
+    | &#x9;&#x9;
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    | &#x9;&#x9;
+    meta(name='description', content='')
+    | &#x9;&#x9;
+    meta(name='keywords', content='')
+    //if lte IE 8
+      script(src='/css/ie/html5shiv.js')
+    | &#x9;&#x9;
+    script(src='/js/jquery.min.js')
+    | &#x9;&#x9;
+    script(src='/js/jquery.dropotron.min.js')
+    | &#x9;&#x9;
+    script(src='/js/jquery.scrolly.min.js')
+    | &#x9;&#x9;
+    script(src='/js/jquery.scrollgress.min.js')
+    | &#x9;&#x9;
+    script(src='/js/skel.min.js')
+    | &#x9;&#x9;
+    script(src='/js/skel-layers.min.js')
+    | &#x9;&#x9;
+    script(src='/js/init.js')
+    | &#x9;&#x9;
+    noscript
+      link(rel='stylesheet', href='/css/skel.css')
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href='/css/style-wide.css')
+      link(rel='stylesheet', href='/css/style-noscript.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='/css/ie/v8.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='/css/ie/v9.css')
+  | &#x9;
+  body.index(style='background-color: black; background-position: center; background-attachment: fixed; background-image: url(http://www.widewallpapers.net/mod/backgrounds/1920x1080/background-wide-wallpaper-1920x1080-005.jpg)')
+    // Header
+    header#header.alt
+      h1#logo
+          | PEYMAN MO
+      nav#nav
+        ul
+          li.current
+            a(href='/') HOME
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li.current
+            a(href='/repositories') REPOSITORIES
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li.current
+            a(href='/pullrequests') PULL REQUESTS
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+
+      section(style='margin-top: 20px')#cta
+        header
+          div
+            block content
+

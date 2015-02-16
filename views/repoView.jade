@@ -1,0 +1,24 @@
+extends layout.jade
+
+block content
+    div.row
+      img(src=repo.owner.avatar_url, style='width=128px; height: 128px; border-radius: 5px;')
+      div
+        h2= repo.name
+        p= repo.description
+          
+
+      div(style='float: right; margin-right: 5%; text-align: right')
+        a(style='color: yellow; align: right', href='/repositories?id='+repo.id)= "More Details"
+        p
+          a(style='color: yellow; align: right', href=repo.html_url)= "View in GitHub"
+
+        h5(style='margin-top: 0px')= "Issues "
+          a(style='color: yellow')= repo.open_issues
+
+        h5(style='margin-top: 0px')= "forks "
+          a(style='color: yellow')= repo.forks
+
+        -date = new Date(repo.created_at)
+        h5= "CREATED AT "
+          a(style='color: yellow')= date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()

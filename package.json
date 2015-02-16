@@ -1,0 +1,18 @@
+{
+  "name": "my-express",
+  "version": "1.0.0",
+  "description": "MY Express|Peyman Mortazavi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peyman Mortazavi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "lodash": "*",
+    "monk":"*",
+    "url": "*"
+  }
+}

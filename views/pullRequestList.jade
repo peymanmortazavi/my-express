@@ -1,0 +1,15 @@
+extends layout.jade
+
+block content
+  each pull in pulls
+    div.row(style='background-color: rgba(0, 250, 250,0.5); margin-bottom: 50px; padding-bottom: 20px')
+      img(src=pull.user.avatar_url, style='width=128px; height: 128px; border-radius: 5px;')
+      div
+        h2= pull.title
+        h6(style='margin-top: 0px')= "by "
+          a(style='color: cyan', href=pull.user.html_url)= pull.user.login
+
+      div(style='float: right; margin-right: 5%; text-align: right')
+        -date = new Date(pull.created_at)
+        p= "CREATED AT " + date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()
+        a(style='color: cyan; align: right', href='/pullrequests?id='+pull.id)= "More Details"

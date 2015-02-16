@@ -1,0 +1,17 @@
+extends layout.jade
+
+block content
+    div.row
+      img(src=pull.user.avatar_url, style='width=256px; height: 256px; border-radius: 5px;')
+      div
+        h2= pull.title
+        h6(style='margin-top: 0px')= "Team Leader "
+          a(style='color: cyan', href=pull.user.html_url)= pull.user.login
+
+        h6(style='margin-top: 0px')= "Repository "
+          a(style='color: cyan', href=pull.head.repo.html_url)= pull.head.repo.full_name
+
+      div(style='float: right; margin-right: 5%; text-align: right')
+        -date = new Date(pull.created_at)
+        p= "CREATED AT " + date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()
+        p= "FORKS " + pull.head.repo.forks_count
